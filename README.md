@@ -42,7 +42,7 @@ ipykernel>=6.0.0
 
 
 ### 2. Prepare Data
-#### Training data download (Google Drive): [data.zip](https://drive.google.com/file/d/1_I9JjBFIBkmxwPYljdZAPyrHhLe9eFah/view?usp=sharing).  
+#### Training and test data download (Google Drive): [data.zip](https://drive.google.com/file/d/1_I9JjBFIBkmxwPYljdZAPyrHhLe9eFah/view?usp=sharing).  
 After downloading, extract the archive and place the `data` folder in the project root directory.
 
 ### 3. Train and Test
