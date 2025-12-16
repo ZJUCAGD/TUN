@@ -50,4 +50,4 @@ A trained best TUN model is provided at `results\checkpoints\best_model_1D.pth`.
 To evaluate it on the four test sets, run the Jupyter notebook `test_exist_model.ipynb`.
 
 To train your own model and evaluate it, run the Jupyter notebook `train_and_test.ipynb` and follow the prompts.  
-Trained models are saved to `results\checkpoints\best_model_1D.pth`.
+Notice that the trained model will save to and rewrite r`results\checkpoints\best_model_1D.pth`.
