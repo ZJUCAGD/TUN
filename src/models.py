@@ -318,7 +318,7 @@ class PersistenceSignificanceNet(nn.Module):
         self.eval()
         with torch.no_grad():
             logits = self.forward(pd_points, point_cloud, aux_features)
-            probabilities = F.softmax(logits, dim=-1)[:, :, 1]  # 取显著类的概率
+            probabilities = F.softmax(logits, dim=-1)[:, :, 1]
             predictions = (probabilities > threshold).long()
             
         return predictions, probabilities
