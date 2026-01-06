@@ -343,7 +343,7 @@ def initialize_weights(model):
             nn.init.constant_(m.weight, 1)
             nn.init.constant_(m.bias, 0)
 
-
+'''
 if __name__ == "__main__":
     # Test the model
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -382,4 +382,5 @@ if __name__ == "__main__":
     print(f"Prediction shape: {predictions.shape}")
 
     print(f"Probability shape: {probabilities.shape}")
+'''
 
