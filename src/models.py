@@ -343,44 +343,4 @@ def initialize_weights(model):
             nn.init.constant_(m.weight, 1)
             nn.init.constant_(m.bias, 0)
 
-'''
-if __name__ == "__main__":
-    # Test the model
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    
-    # Create model
-    model = PersistenceSignificanceNet(
-        pd_input_dim=2,
-        pc_input_dim=3,
-        aux_dim=10,  # Assume 10-dimensional auxiliary features
-        hidden_dim=128,
-        fusion_dim=256,
-        num_classes=2
-    ).to(device)
-    
-    # Initialize weights
-    initialize_weights(model)
-    
-    print(f"Number of model parameters: {count_parameters(model):,}")
-    
-    # Test forward pass
-    batch_size = 4
-    num_pd_points = 20
-    num_pc_points = 1000
-    
-    # Simulate data
-    pd_points = torch.randn(batch_size, num_pd_points, 2).to(device)
-    point_cloud = torch.randn(batch_size, num_pc_points, 3).to(device)
-    aux_features = torch.randn(batch_size, 10).to(device)
-    
-    # Forward pass
-    output = model(pd_points, point_cloud, aux_features)
-    print(f"Output shape: {output.shape}")
-    
-    # Test prediction function
-    predictions, probabilities = model.predict_significance(pd_points, point_cloud, aux_features)
-    print(f"Prediction shape: {predictions.shape}")
-
-    print(f"Probability shape: {probabilities.shape}")
-'''
 
