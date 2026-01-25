@@ -463,8 +463,8 @@ class ModelEvaluator:
         print(f"Accuracy: {metrics['accuracy']:.5f}")
         print(f"Precision: {metrics['precision']:.5f}")
         print(f"Recall: {metrics['recall']:.5f}")
-        if 'roc_auc' in metrics:
-            print(f"ROC AUC: {metrics['roc_auc']:.5f}")
+        #if 'roc_auc' in metrics:
+        #    print(f"ROC AUC: {metrics['roc_auc']:.5f}")
         print(f"Total Samples: {len(self.results['targets'])}")
         print(f"Class Distribution: {metrics['class_distribution']}")
         print("="*60)
