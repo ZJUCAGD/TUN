@@ -358,13 +358,13 @@ class ModelEvaluator:
                 
                 if np.any(non_significant_mask):
                     ax0.scatter(filtered_points[non_significant_mask, 0], filtered_points[non_significant_mask, 1], 
-                               c='lightblue', alpha=0.8, s=30, label='Noise')
+                               c='blue', alpha=1, s=30, label='Noise')
                 
                 if np.any(significant_mask):
                     ax0.scatter(filtered_points[significant_mask, 0], filtered_points[significant_mask, 1], 
-                               c='red', alpha=1, s=50, label='Significant')
+                               c='red', alpha=1, s=30, label='Significant')
                 
-                ax0.legend()
+                ax0.legend(loc='lower right')
             else:
                 ax0.scatter(filtered_points[:, 0], filtered_points[:, 1], c='blue', alpha=0.8, s=30)
             
@@ -381,13 +381,13 @@ class ModelEvaluator:
                 
                 if np.any(non_significant_mask):
                     ax1.scatter(filtered_points[non_significant_mask, 0], filtered_points[non_significant_mask, 1], 
-                               c='blue', alpha=0.8, s=30, label='Noise')
+                               c='blue', alpha=1, s=30, label='Noise')
                 
                 if np.any(significant_mask):
                     ax1.scatter(filtered_points[significant_mask, 0], filtered_points[significant_mask, 1], 
                                c='red', alpha=1, s=30, label='Significant')
                 
-                ax1.legend()
+                ax1.legend(loc='lower right')
             else:
                 ax1.scatter(filtered_points[:, 0], filtered_points[:, 1], c='blue', alpha=0.6, s=30)
             
